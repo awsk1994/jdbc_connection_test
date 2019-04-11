@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35ffeb38-ef4c-42e4-a854-0db27766f93b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/dbConnectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbConnectTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dbConnectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbConnectTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dbConnectTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="420">
+              <caret line="41" column="38" lean-forward="true" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,7 +80,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555006468804" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555006850286" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/dbConnectTest.java" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
@@ -149,8 +150,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dbConnectTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="420">
+          <caret line="41" column="38" lean-forward="true" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

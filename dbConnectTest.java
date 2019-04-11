@@ -29,6 +29,7 @@ class dbConnectTest
 	static int rpt;
 	static int rpt_int_sec;
 	static int retries;
+	static int rpt_count;
 
 	static Connection conn;
 
@@ -41,7 +42,7 @@ class dbConnectTest
 				printArgsMap(argsMap);
 			}
 
-			for(int i=0; i<rpt; i++){
+			for(rpt_count=1; rpt_count<=rpt; rpt_count++){
 				connectToDb(argsMap);
 				Thread.sleep(rpt_int_sec * 1000);
 			}
@@ -49,6 +50,8 @@ class dbConnectTest
 			e.printStackTrace();
 		}
 	}
+
+	/* Configurations */
 
 	private static HashMap<String, String> convertToKeyValuePair(String[] args) throws Exception {
 		HashMap<String, String> argsMap = new HashMap<>();
@@ -115,6 +118,8 @@ class dbConnectTest
 		return argsMap;
 	}
 
+	/* Connections to Database */
+
 	private static void connectToDb(HashMap<String, String> argsMap) throws Exception {
 		establishConnection(argsMap.get(KEY_DB_URL), argsMap.get(KEY_DB_UNAME), argsMap.get(KEY_DB_PW));
 		closeConnection();
@@ -123,16 +128,16 @@ class dbConnectTest
 	private static void establishConnection(String url, String uname, String pw){
 		try
 		{
-			print("INFO", "Attempting to connect to database.");
+			print("INFO", "(rpt_count=" + rpt_count + ") Attempting to connect to database.");
 			conn = DriverManager.getConnection(url, uname, pw);
-			print("INFO", "Connected successfully.");
+			print("INFO", "(rpt_count=" + rpt_count + ") Connected successfully.");
 		}
 		catch (Exception e)
 		{
 			retries++;
 			e.printStackTrace();
 			if(retries < max_retries){
-				print("ERROR", "Failed to connect (retries = " + retries + "). Trying again in 1 second.");
+				print("ERROR", "(rpt_count=" + rpt_count + ") Failed to connect (retries = " + retries + "). Trying again in 1 second.");
 
 				try{
 					Thread.sleep(1000);
@@ -141,7 +146,7 @@ class dbConnectTest
 					e2.printStackTrace();
 				}
 			} else {
-				print("ERROR", "Failed to connect (retries = " + retries + "). Reached MAX_RETRIES (" + max_retries + ").");
+				print("ERROR", "(rpt_count=" + rpt_count + ") Failed to connect (retries = " + retries + "). Reached MAX_RETRIES (" + max_retries + ").");
 			}
 		}
 	}
@@ -155,10 +160,12 @@ class dbConnectTest
 			}
 			catch(SQLException e)
 			{
-				print("ERROR", "SQL Exception while closing.");
+				print("ERROR", "(rpt_count=" + rpt_count + ") SQL Exception while closing.");
 			}
 		}
 	}
+
+	/* Utility Functions */
 
 	private static void print(String level, String message){
 		LocalDateTime currentTime = LocalDateTime.now();
