@@ -1,1 +1,1 @@
-javac -cp ".;sqljdbc4-2.0.jar;" dbConnectTest.java
+javac -cp ".;sqljdbc4.jar;" dbConnectTest.java

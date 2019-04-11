@@ -121,32 +121,29 @@ class dbConnectTest
 	/* Connections to Database */
 
 	private static void connectToDb(HashMap<String, String> argsMap) throws Exception {
+		retries = 0;
 		establishConnection(argsMap.get(KEY_DB_URL), argsMap.get(KEY_DB_UNAME), argsMap.get(KEY_DB_PW));
 		closeConnection();
 	}
 
-	private static void establishConnection(String url, String uname, String pw){
+	private static void establishConnection(String url, String uname, String pw) throws Exception {
 		try
 		{
 			print("INFO", "(rpt_count=" + rpt_count + ") Attempting to connect to database.");
 			conn = DriverManager.getConnection(url, uname, pw);
 			print("INFO", "(rpt_count=" + rpt_count + ") Connected successfully.");
 		}
-		catch (Exception e)
+		catch (SQLException e)
 		{
 			retries++;
 			e.printStackTrace();
 			if(retries < max_retries){
-				print("ERROR", "(rpt_count=" + rpt_count + ") Failed to connect (retries = " + retries + "). Trying again in 1 second.");
-
-				try{
-					Thread.sleep(1000);
-					establishConnection(url, uname, pw);
-				} catch (InterruptedException e2){
-					e2.printStackTrace();
-				}
+				print("ERROR", "(rpt_count=" + rpt_count + ", retries=" + retries + ") Failed to connect. Trying again in 1 second.");
+				Thread.sleep(1000);
+				establishConnection(url, uname, pw);
 			} else {
-				print("ERROR", "(rpt_count=" + rpt_count + ") Failed to connect (retries = " + retries + "). Reached MAX_RETRIES (" + max_retries + ").");
+				print("ERROR", "(rpt_count=" + rpt_count + ", retries=" + retries + ") Failed to connect. Reached MAX_RETRIES (" + max_retries + ").");
+				throw new Exception("Failed to connect. Reached MAX_RETRIES (" + max_retries + ").");
 			}
 		}
 	}

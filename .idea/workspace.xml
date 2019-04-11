@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35ffeb38-ef4c-42e4-a854-0db27766f93b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/build.bat" beforeDir="false" afterPath="$PROJECT_DIR$/build.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_and_run_adv.bat" beforeDir="false" afterPath="$PROJECT_DIR$/build_and_run_adv.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_and_run_basic.bat" beforeDir="false" afterPath="$PROJECT_DIR$/build_and_run_basic.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dbConnectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/dbConnectTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dbConnectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dbConnectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sqljdbc4-2.0.jar" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dbConnectTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="41" column="38" lean-forward="true" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
+            <state relative-caret-position="359">
+              <caret line="154" column="13" lean-forward="true" selection-start-line="154" selection-start-column="13" selection-end-line="154" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,6 +44,7 @@
     <findStrings>
       <find>MAX_RETRIES</find>
       <find>System.out.println</find>
+      <find>retries</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -80,7 +85,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555006850286" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555012665561" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/dbConnectTest.java" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
@@ -111,7 +116,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12739871" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -150,8 +154,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dbConnectTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="41" column="38" lean-forward="true" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
+        <state relative-caret-position="359">
+          <caret line="154" column="13" lean-forward="true" selection-start-line="154" selection-start-column="13" selection-end-line="154" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
