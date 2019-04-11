@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 
 class dbConnectTest
 {
-	/* 	String format for String DB_URL:
+	/* 	String format for db url:
 			MySQL: jdbc:mysql://<HOST>:<PORT>/<DATABASE_NAME>	
 			Microsoft SQL Server: jdbc:microsoft:sqlserver://<HOST>:<PORT>;databaseName= <DATABASE_NAME>;<OPTIONS>
 			More: https://www.ibm.com/support/knowledgecenter/en/SSEP7J_10.1.1/com.ibm.swg.ba.cognos.vvm_ag_guide.10.1.1.doc/c_ag_samjdcurlform.html
@@ -15,7 +15,7 @@ class dbConnectTest
 	final static String DEFAULT_DEBUG = "0";
 	final static String DEFAULT_MAX_RETRIES = "3";
 	final static String DEFAULT_RPT = "1";
-	final static String DEFAULT_RPT_INT_SEC = "0";
+	final static String DEFAULT_RPT_INT_SEC = "5";
 
 	final static String KEY_DB_URL = "url";
 	final static String KEY_DB_UNAME = "uname";
